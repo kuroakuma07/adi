@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body><!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">MRW</h1>
+            <ul class="menu-list">
+                <li class="menu-list-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="menu-list-item active">
+                    <a href="movies.html">Movies</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="series.html">Series</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="popular.html">Popular</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <i class="left-menu-icon fas fa-search" onclick="openSearch()"></i>
+
+        <a href="index.html">
+            <i class="left-menu-icon fas fa-home"></i>
+        </a>
+
+        <a href="watchlist.html">
+            <i class="left-menu-icon fas fa-bookmark"></i>
+        </a>
+
+        <a href="series.html">
+            <i class="left-menu-icon fas fa-tv"></i>
+        </a>
+
+        <a href="buyrent.html">
+            <i class="left-menu-icon fas fa-shopping-cart"></i>
+        </a>
+
+
+
+    </div>
+
+    <div class="container">
+        <div class="content-container"><!-- CATEGORY SELECT -->
+            <div class="category-bar"><select onchange="goCategory(this.value)" class="category-select">
+                    <option value="">All Categories</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                </select></div><!-- BANNER -->
+            <div class="banner-slider">
+                <h1>Top Movies</h1>
+                <p>Watch trending movies from every category</p><button class="featured-button">
+                    WATCH
+                </button>
+            </div><!-- ACTION -->
+            <div class="movie-category" id="action">
+                <h2>Action</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="img/1.jpeg">
+                        <div class="movie-info">
+                            <h3>Avengers</h3>
+                            <p>Marvel heroes unite to save the world.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/2.jpeg">
+                        <div class="movie-info">
+                            <h3>Star Wars</h3>
+                            <p>Epic battle between Jedi and Sith.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/3.jpg">
+                        <div class="movie-info">
+                            <h3>Storm</h3>
+                            <p>Action thriller with intense fights.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/4.jpg">
+                        <div class="movie-info">
+                            <h3>1917</h3>
+                            <p>World war survival mission story.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/5.jpg">
+                        <div class="movie-info">
+                            <h3>Joker</h3>
+                            <p>Origin story of Gotham's villain.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- COMEDY -->
+            <div class="movie-category" id="comedy">
+                <h2>Comedy</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="img/6.jpg">
+                        <div class="movie-info">
+                            <h3>The Mask</h3>
+                            <p>Comedy movie with crazy fun moments.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/1.jpeg">
+                        <div class="movie-info">
+                            <h3>Deadpool</h3>
+                            <p>Funny superhero with crazy humor.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/2.jpeg">
+                        <div class="movie-info">
+                            <h3>Rush Hour</h3>
+                            <p>Police comedy action movie.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- DRAMA -->
+            <div class="movie-category" id="drama">
+                <h2>Drama</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="img/3.jpg">
+                        <div class="movie-info">
+                            <h3>Her</h3>
+                            <p>Romantic AI love story.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/4.jpg">
+                        <div class="movie-info">
+                            <h3>Interstellar</h3>
+                            <p>Space exploration emotional journey.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- HORROR -->
+            <div class="movie-category" id="horror">
+                <h2>Horror</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="img/5.jpg">
+                        <div class="movie-info">
+                            <h3>Conjuring</h3>
+                            <p>Supernatural horror investigation.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/6.jpg">
+                        <div class="movie-info">
+                            <h3>Annabelle</h3>
+                            <p>Haunted doll horror movie.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function goCategory(category) {
+
+            if (category === "") return;
+
+            document.getElementById(category).scrollIntoView({
+                behavior: "smooth"
+            })
+
+        }
+
+    </script>
+</body>
+
+</html>

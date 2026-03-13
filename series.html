@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Series</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body><!-- NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">MRW</h1>
+            <ul class="menu-list">
+                <li class="menu-list-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="movies.html">Movies</a>
+                </li>
+                <li class="menu-list-item active">
+                    <a href="series.html">Series</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="popular.html">Popular</a>
+                </li>
+                <li class="menu-list-item">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <i class="left-menu-icon fas fa-search" onclick="openSearch()"></i>
+
+        <a href="index.html">
+            <i class="left-menu-icon fas fa-home"></i>
+        </a>
+
+        <a href="watchlist.html">
+            <i class="left-menu-icon fas fa-bookmark"></i>
+        </a>
+
+        <a href="series.html">
+            <i class="left-menu-icon fas fa-tv"></i>
+        </a>
+
+        <a href="buyrent.html">
+            <i class="left-menu-icon fas fa-shopping-cart"></i>
+        </a>
+
+
+
+    </div>
+    <div class="container">
+        <div class="content-container"><!-- CATEGORY SELECT -->
+            <div class="category-bar"><select onchange="goCategory(this.value)" class="category-select">
+                    <option value="">All Categories</option>
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                </select></div><!-- BANNER -->
+            <div class="banner-slider">
+                <h1>Top Series</h1>
+                <p>Watch trending series from every category</p><button class="featured-button">
+                    WATCH
+                </button>
+            </div><!-- ACTION SERIES -->
+            <div class="movie-category" id="action">
+                <h2>Action Series</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="img/1.jpeg">
+                        <div class="movie-info">
+                            <h3>Stranger Things</h3>
+                            <p>Mysterious supernatural events in a small town.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/2.jpeg">
+                        <div class="movie-info">
+                            <h3>The Witcher</h3>
+                            <p>Monster hunter in a dark fantasy world.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/3.jpg">
+                        <div class="movie-info">
+                            <h3>Vikings</h3>
+                            <p>Legendary Norse warrior adventures.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- COMEDY SERIES -->
+            <div class="movie-category" id="comedy">
+                <h2>Comedy Series</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="img/4.jpg">
+                        <div class="movie-info">
+                            <h3>Friends</h3>
+                            <p>Six friends living their life in New York.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/5.jpg">
+                        <div class="movie-info">
+                            <h3>The Office</h3>
+                            <p>Comedy workplace documentary style show.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- DRAMA SERIES -->
+            <div class="movie-category" id="drama">
+                <h2>Drama Series</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="img/6.jpg">
+                        <div class="movie-info">
+                            <h3>Breaking Bad</h3>
+                            <p>Chemistry teacher becomes drug kingpin.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/3.jpg">
+                        <div class="movie-info">
+                            <h3>Game of Thrones</h3>
+                            <p>Epic fantasy battle for the iron throne.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- HORROR SERIES -->
+            <div class="movie-category" id="horror">
+                <h2>Horror Series</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <img src="img/1.jpeg">
+                        <div class="movie-info">
+                            <h3>The Haunting</h3>
+                            <p>Terrifying haunted house mystery.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                        <img src="img/2.jpeg">
+                        <div class="movie-info">
+                            <h3>From</h3>
+                            <p>Mysterious town where nobody escapes.</p>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function goCategory(category) {
+
+            if (category === "") return;
+
+            document.getElementById(category).scrollIntoView({
+                behavior: "smooth"
+            })
+
+        }
+
+    </script>
+</body>
+
+</html>

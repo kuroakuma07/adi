@@ -1,0 +1,65 @@
+body{
+background-color:#151515;
+color:white;
+font-family:Arial;
+}
+
+.contact-container{
+margin-left:120px;
+padding:50px;
+}
+
+.contact-container h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.contact-container p{
+color:lightgray;
+margin-bottom:30px;
+}
+
+.contact-box{
+display:flex;
+flex-direction:column;
+width:400px;
+}
+
+.contact-box input,
+.contact-box textarea{
+
+margin-bottom:15px;
+padding:12px;
+border:none;
+border-radius:5px;
+font-size:15px;
+}
+
+.contact-box textarea{
+height:120px;
+resize:none;
+}
+
+.send-btn{
+
+background-color:#4dbf00;
+color:white;
+border:none;
+padding:12px;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.send-btn:hover{
+background-color:#3da000;
+}
+
+.help-section{
+margin-top:50px;
+}
+
+.help-section h2{
+margin-bottom:15px;
+}
