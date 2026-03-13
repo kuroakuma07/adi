@@ -28,9 +28,9 @@
 
                 </ul>
             </div>
-            <div class="profile-container" onclick="openProfile()">
+            <div class="profile-container">
                 <img class="profile-picture" src="img/profile.jpg" alt="">
-                <div class="profile-text-container">
+                <div class="profile-text-container" onclick="openProfile()">
                     <span class="profile-text">Profile</span>
                     <i class="fas fa-caret-down"></i>
                 </div>
@@ -55,7 +55,7 @@
             <i class="left-menu-icon fas fa-bookmark"></i>
         </a>
 
-        <a href="series.html">
+        <a href="devices.html">
             <i class="left-menu-icon fas fa-tv"></i>
         </a>
 
@@ -67,7 +67,8 @@
 
     </div>
     <div id="searchBox" class="search-box">
-        <input type="text" placeholder="Search movies, series...">
+        <input type="text" id="searchInput" placeholder="Search movies, series...">
+        <p id="notFound" style="display:none;colur:#fff;margin-top:10px;">Movie not found.</p>
     </div>
     <div class="container">
         <div class="content-container">
@@ -109,6 +110,7 @@
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
+                            <i class="fas fa-bookmark watchlist-btn"></i>
                             <img class="movie-list-item-img" src="img/1.jpeg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At

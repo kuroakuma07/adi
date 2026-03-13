@@ -37,14 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // DARK MODE SYSTEM
 
-
     const ball = document.querySelector(".toggle-ball");
 
     const items = document.querySelectorAll(
         "body,.container,.movie-list-title,.navbar,.navbar-container,.sidebar,.left-menu-icon,.toggle,.menu-list-item a"
     );
 
-    // LOAD SAVED THEME
+    // APPLY SAVED THEME WHEN PAGE LOADS
 
     if (localStorage.getItem("theme") === "light") {
 
@@ -58,15 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-    // TOGGLE CLICK (ONLY IF BUTTON EXISTS)
+    // TOGGLE DARK / LIGHT MODE
 
     if (ball) {
 
         ball.addEventListener("click", () => {
 
-
-                        items.forEach((item) => {
+            items.forEach((item) => {
                 item.classList.toggle("active");
             });
 
@@ -81,8 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
-
 
     // BANNER SLIDER
 

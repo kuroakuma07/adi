@@ -1,34 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>Watchlist</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="watchlist.css">
 </head>
 
 <body>
 
-    <div class="sidebar">
-        <i class="left-menu-icon fas fa-search"></i>
-        <i class="left-menu-icon fas fa-home"></i>
-        <i class="left-menu-icon fas fa-users"></i>
-        <i class="left-menu-icon fas fa-bookmark"></i>
-        <i class="left-menu-icon fas fa-tv"></i>
-        <i class="left-menu-icon fas fa-hourglass-start"></i>
-        <i class="left-menu-icon fas fa-shopping-cart"></i>
-    </div>
-
     <div class="container">
 
-        <h1 style="color:white">My Watchlist</h1>
+        <h1>Your Watchlist</h1>
+        <p>Movies and series you saved to watch later.</p>
 
-        <ul style="color:white">
-            <li>Avatar</li>
-            <li>Interstellar</li>
-            <li>John Wick</li>
-        </ul>
+        <div class="watchlist-grid">
+
+            <div class="movie-card">
+                <img src="img/movie1.jpg">
+                <h3>Avengers Endgame</h3>
+                <button>Watch Now</button>
+            </div>
+
+            <div class="movie-card">
+                <img src="img/movie2.jpg">
+                <h3>Stranger Things</h3>
+                <button>Watch Now</button>
+            </div>
+
+            <div class="movie-card">
+                <img src="img/movie3.jpg">
+                <h3>Money Heist</h3>
+                <button>Watch Now</button>
+            </div>
+
+            <div class="movie-card">
+                <img src="img/movie4.jpg">
+                <h3>John Wick</h3>
+                <button>Watch Now</button>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="back-btn">⬅ Back to Home</a>
 
     </div>
+     <script src="app.js"></script>
 
 </body>
 

@@ -1,0 +1,65 @@
+body{
+background:#151515;
+color:white;
+font-family:Arial;
+margin:0;
+}
+
+.container{
+padding:50px;
+text-align:center;
+}
+
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.watchlist-grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+margin-top:40px;
+}
+
+.movie-card{
+background:#222;
+padding:20px;
+border-radius:10px;
+width:200px;
+transition:0.3s;
+}
+
+.movie-card:hover{
+transform:scale(1.05);
+}
+
+.movie-card img{
+width:100%;
+border-radius:8px;
+}
+
+.movie-card h3{
+margin:10px 0;
+}
+
+.movie-card button{
+background:#4dbf00;
+border:none;
+padding:10px 15px;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:40px;
+padding:12px 25px;
+background:#4dbf00;
+color:black;
+text-decoration:none;
+border-radius:20px;
+font-weight:bold;
+}
