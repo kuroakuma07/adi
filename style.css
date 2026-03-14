@@ -702,6 +702,38 @@ cursor:pointer;
 }
 
 
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+.sidebar{
+width:60px;
+}
+
+.container{
+margin-left:60px;
+}
+
+.movie-list{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.movie-list-item{
+width:100%;
+}
+
+.featured-content{
+height:300px;
+}
+
+.banner-slide h1{
+font-size:28px;
+}
+
+}
+
 @media only screen and (max-width: 940px) {
     .menu-container {
         display: none;
