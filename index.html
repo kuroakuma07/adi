@@ -29,7 +29,7 @@
                 </ul>
             </div>
             <div class="profile-container">
-                <img class="profile-picture" src="img/profile.jpg" alt="">
+                <img class="profile-picture" src="img/smile.jpeg" alt="">
                 <div class="profile-text-container" onclick="openProfile()">
                     <span class="profile-text">Profile</span>
                     <i class="fas fa-caret-down"></i>
@@ -59,16 +59,15 @@
             <i class="left-menu-icon fas fa-tv"></i>
         </a>
 
-        <a href="buyrent.html">
+        <a href="buy.html">
             <i class="left-menu-icon fas fa-shopping-cart"></i>
         </a>
 
-    
-
     </div>
+
     <div id="searchBox" class="search-box">
         <input type="text" id="searchInput" placeholder="Search movies, series...">
-        <p id="notFound" style="display:none;colur:#fff;margin-top:10px;">Movie not found.</p>
+        <p id="notFound" style="display:none;color:#fff;margin-top:10px;">Movie not found.</p>
     </div>
     <div class="container">
         <div class="content-container">
@@ -78,25 +77,26 @@
 
                     <i class="fas fa-chevron-left banner-arrow left-arrow" onclick="prevSlide()"></i>
 
-                    <div class="banner-slide active">
-                        <h1>It's My City</h1>
+                    <!-- SLIDES -->
+                    <div class="banner-slide active" style="background-image:url('img/peakyblinders.jpeg');" >
+                        <h1>Peaky Blinders</h1>
                         <p>Entertainment | Hindi</p>
                         <p>A web series about four crazy girls and their journey finding their place in a new city.</p>
-                        <button class="featured-button">WATCH</button>
+                        <button class="featured-button watch-btn" data-video="videos/peakyblindersvideo.mp4" onclick="openVideo(event)">WATCH </button>
                     </div>
 
-                    <div class="banner-slide">
+                    <div class="banner-slide"  style="background-image:url('img/avengers.jpeg');" >
                         <h1>Avengers</h1>
                         <p>Action | Marvel</p>
                         <p>The Avengers unite to fight the most dangerous threats to Earth.</p>
-                        <button class="featured-button">WATCH</button>
+                        <button class="featured-button  watch-btn " data-video="videos/avengersvideo.mp4" onclick="openVideo(event)">WATCH</button>
                     </div>
 
-                    <div class="banner-slide">
+                    <div class="banner-slide" style="background-image:url('img/strangersthings.jpeg'); background-position:center;" >
                         <h1>Stranger Things</h1>
                         <p>Sci-Fi | Series</p>
                         <p>A group of kids uncover supernatural secrets in their town.</p>
-                        <button class="featured-button">WATCH</button>
+                        <button class="featured-button watch-btn" data-video="videos/strangerthingsvideo.mp4" onclick="openVideo(event)">WATCH</button>
                     </div>
 
                     <i class="fas fa-chevron-right banner-arrow right-arrow" onclick="nextSlide()"></i>
@@ -106,115 +106,115 @@
 
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <h2 class="movie-list-title">TOP TRENDING</h2>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
                             <i class="fas fa-bookmark watchlist-btn"></i>
-                            <img class="movie-list-item-img" src="img/1.jpeg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/fastandfurious.jpeg" alt="">
+                            <span class="movie-list-item-title">Fast & Furious</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/2.jpeg" alt="">
+                            <img class="movie-list-item-img" src="img/starwars.jpeg" alt="">
                             <span class="movie-list-item-title">Star Wars</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/3.jpg" alt="">
-                            <span class="movie-list-item-title">Storm</span>
+                            <img class="movie-list-item-img" src="img/onepiece2.jpeg" alt="">
+                            <span class="movie-list-item-title">One Piece</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
-                            <span class="movie-list-item-title">1917</span>
+                            <img class="movie-list-item-img" src="img/bajirao.jpeg" alt="">
+                            <span class="movie-list-item-title">Bajirao</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/5.jpg" alt="">
-                            <span class="movie-list-item-title">Avengers</span>
+                            <img class="movie-list-item-img" src="img/wednesday.jpeg" alt="">
+                            <span class="movie-list-item-title">Wednesday</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/6.jpg" alt="">
+                            <img class="movie-list-item-img" src="img/her.jpeg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/rushhour.jpeg" alt="">
+                            <span class="movie-list-item-title">Rush Hour</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo() ">Watch</button>
                         </div>
                     </div>
                     <i class="fas fa-chevron-right arrow"></i>
                 </div>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <h2 class="movie-list-title">HOLLYWOOD</h2>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/8.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/avengers2.jpeg" alt="">
+                            <span class="movie-list-item-title">Avengers: Endgame</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/9.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/joker.jpeg" alt="">
+                            <span class="movie-list-item-title">Joker</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/10.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/deadpool.jpeg" alt="">
+                            <span class="movie-list-item-title">Deadpool</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/11.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/jurassic.jpeg" alt="">
+                            <span class="movie-list-item-title">Jurassic Park</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/12.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/avatar.jpeg" alt="">
+                            <span class="movie-list-item-title">Avatar</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/rushhour.jpeg" alt="">
+                            <span class="movie-list-item-title">Rush Hour</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/1917.jpeg" alt="">
+                            <span class="movie-list-item-title">1917</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                     </div>
                     <i class="fas fa-chevron-right arrow"></i>
@@ -222,121 +222,119 @@
             </div>
             <div class="featured-content"
                 style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-2.jpg');">
-                <img class="featured-title" src="img/f-t-2.png" alt="">
-                <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
-                    deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
-                    minima voluptatibus incidunt. Accusamus, provident.</p>
-                <button class="featured-button">WATCH</button>
+                <img class="featured-title" src="img/traintobusan.jpeg" alt="">
+                <p class="featured-desc">Movie is based on a zombies outbreak. Advantures Action</p>
+                <button class="featured-button watch-btn" onclick="openVideo()">WATCH</button>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <h2 class="movie-list-title">BOLLYWOOD</h2>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpeg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/bajirao.jpeg" alt="">
+                            <span class="movie-list-item-title">Bajirao Mastani</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/2.jpeg" alt="">
+                            <img class="movie-list-item-img" src="img/tarezameenpar.jpeg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/15.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/chhavva.jpeg" alt="">
+                            <span class="movie-list-item-title">Chhavva</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/3.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/ramaiyavastavaiya.jpeg" alt="">
+                            <span class="movie-list-item-title">Ramaiya Vastavaiya</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/4.jpg" alt="">
+                            <img class="movie-list-item-img" src="img/.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/5.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/1.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                     </div>
                     <i class="fas fa-chevron-right arrow"></i>
                 </div>
             </div>
             <div class="movie-list-container">
-                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <h2 class="movie-list-title">ANIME</h2>
                 <div class="movie-list-wrapper">
                     <div class="movie-list">
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/17.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/onepiece.jpeg" alt="">
+                            <span class="movie-list-item-title">One Piece</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/18.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/solo.jpeg" alt="">
+                            <span class="movie-list-item-title">Solo Livling</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/19.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/savendeadlysins.jpeg" alt="">
+                            <span class="movie-list-item-title">Savendeadlysins</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/7.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/naruto.jpeg" alt="">
+                            <span class="movie-list-item-title">Naruto</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
+                            <img class="movie-list-item-img" src="img/spyxfamily.jpeg" alt="">
+                            <span class="movie-list-item-title">Spy x Family</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                         <div class="movie-list-item">
                             <img class="movie-list-item-img" src="img/1.jpg" alt="">
                             <span class="movie-list-item-title">Her</span>
                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                                 hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button">Watch</button>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                            <span class="movie-list-item-title">Her</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                                hic fugit similique accusantium.</p>
+                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
                         </div>
                     </div>
                     <i class="fas fa-chevron-right arrow"></i>
@@ -355,27 +353,44 @@
 
             <h2>Create Account</h2>
 
-            <input type="text" placeholder="Name">
+            <input type="text" id="name" placeholder="Name">
 
-            <input type="date">
+            <input type="date" id="dob" placeholder="Date of Birth">
 
-            <select>
+            <select id="gender">
                 <option>Gender</option>
                 <option>Male</option>
                 <option>Female</option>
             </select>
 
-            <input type="email" placeholder="Email">
+            <input type="email" id="email" placeholder="Email">
 
-            <input type="text" placeholder="Phone">
+            <input type="text" id="phone" placeholder="Phone" maxlength="10">
 
-            <input type="password" placeholder="Password">
+            <input type="password" id="password" placeholder="Password">
 
-            <button>Create Account</button>
+            <button  onclick="signupUser()">Create Account</button>
+
+            <button  onclick="loginUser()">Login</button>
+
+            <button  onclick="logoutUser()">Logout</button>
 
         </div>
 
     </div>
+
+    <div id="videoPopup" class="video-popup">
+
+    <div class="video-container">
+        <span class="close-video" onclick="closeVideo()">✖</span>
+
+        <video id="movieVideo"  width="800" controls>
+            <source src="videos/avengersvideo.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+</div>
     <script src="app.js"></script>
 </body>
 
