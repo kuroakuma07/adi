@@ -441,4 +441,4 @@ showSlide(index);
 
 
 // AUTO PLAY EVERY 3 SECONDS
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 5000);
