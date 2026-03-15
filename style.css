@@ -149,7 +149,7 @@ body {
 }
 
 .featured-content{
-height:40vh;
+height:auto;
 padding:50px;
 overflow:hidden;
 border-radius:15px;
