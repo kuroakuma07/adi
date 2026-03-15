@@ -776,14 +776,14 @@ background:#ff2222;
     }
 
     .featured-content{
-height:auto;
-padding:20px;
-margin-bottom:20px;
+height: 180px;;
+padding:15px;
+margin-bottom:10px;
 }
 
 .banner-slide{
-height:220px;
-padding:20px;
+height:180px;
+padding: 15px;
 }
 
 .movie-category{
