@@ -775,6 +775,21 @@ background:#ff2222;
         font-size: 12px;
     }
 
+    .featured-content{
+height:auto;
+padding:20px;
+margin-bottom:20px;
+}
+
+.banner-slide{
+height:220px;
+padding:20px;
+}
+
+.movie-category{
+margin-top:20px;
+}
+
 }
 
 .watchlist-btn.active {
@@ -795,7 +810,7 @@ font-size:22px;
 .movie-grid{
 display:grid;
 grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-gap:20px;
+gap: 15px;
 padding:20px;
 margin-top: 20px;
 }
