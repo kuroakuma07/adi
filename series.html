@@ -52,12 +52,17 @@
         <a href="buy.html">
             <i class="left-menu-icon fas fa-shopping-cart"></i>
         </a>
+</div>
+
+         <div id="searchBox" class="search-box">
+<input type="text" id="searchInput" placeholder="Search movies, series...">
+<p id="notFound" style="display:none;color:#fff;margin-top:10px;">Movie not found.</p>
+</div>
 
 
-
-    </div>
     <div class="container">
-        <div class="content-container"><!-- CATEGORY SELECT -->
+        <div class="content-container">
+            <!-- CATEGORY SELECT -->
             <div class="category-bar"><select onchange="goCategory(this.value)" class="category-select">
                     <option value="">All Categories</option>
                     <option value="action">Action</option>
@@ -70,7 +75,7 @@
             <div class="banner-slider">
 
                 <div class="banner-slide active"
-                    style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');">
+                    style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/strangersthings.jpeg');">
 
                     <h1>Stranger Things</h1>
                     <p>Sci-Fi | Series</p>
@@ -83,36 +88,54 @@
                                 <i class="far fa-star"></i> 
                                  <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                             </div>
-                    <button class="featured-button">WATCH</button>
+                    <button class="featured-button  watch-btn " data-video="videos/strangerthingsvideo.mp4"
+                            onclick="openVideo(event)">WATCH</button>
 
                 </div>
 
 
                 <div class="banner-slide"
-                    style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-2.jpg');">
+                    style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/avengers0.jpeg');">
 
                     <h1>Avengers</h1>
                     <p>Action | Movie</p>
                     <p>Marvel heroes unite to save Earth.</p>
+                     <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> 
+                                 <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
 
-                    <button class="featured-button">WATCH</button>
+                    <button class="featured-button  watch-btn " data-video="videos/avengersvideo.mp4"
+                            onclick="openVideo(event)">WATCH</button>
 
                 </div>
 
 
                 <div class="banner-slide"
-                    style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-3.jpg');">
+                    style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/intersteller.jpg');">
 
                     <h1>Interstellar</h1>
                     <p>Sci-Fi Adventure</p>
                     <p>Journey across space to save humanity.</p>
+                     <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> 
+                                 <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
 
                     <button class="featured-button">WATCH</button>
 
                 </div>
 
-                <i class="fas fa-chevron-left banner-prev"></i>
-                <i class="fas fa-chevron-right banner-next"></i>
+                <i class="fas fa-chevron-left banner-prev " onclick="prevSlide()"></i>
+                <i class="fas fa-chevron-right banner-next" onclick="nextSlide()"></i>
 
             </div>
 
@@ -121,6 +144,7 @@
                 <h2>Action Series</h2>
                 <div class="movie-grid">
                     <div class="movie-card">
+                        <i class="fas fa-bookmark watchlist-btn" data-title="Stranger Things" data-img="img/strangerthings2.jpeg"></i>
                         <img src="img/strangerthings2.jpeg">
                         <div class="movie-info">
                             <h3>Stranger Things</h3>
@@ -133,10 +157,12 @@
                                 <i class="far fa-star"></i> 
                                  <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                             </div>
-                            <button class="watch-btn">Watch</button>
+                           <button class="featured-button  watch-btn " data-video="videos/strangerthingsvideo.mp4"
+                            onclick="openVideo(event)">WATCH</button>
                         </div>
                     </div>
                     <div class="movie-card" style="background-position: bottom ;">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="The Witcher" data-img="img/thewitcher.jpeg"></i>
                         <img src="img/thewitcher.jpeg">
                         <div class="movie-info">
                             <h3>The Witcher</h3>
@@ -153,6 +179,7 @@
                         </div>
                     </div>
                     <div class="movie-card">
+                        <i class="fas fa-bookmark watchlist-btn" data-title="Vikings" data-img="img/vikings.jpeg"></i>
                         <img src="img/vikings.jpeg">
                         <div class="movie-info">
                             <h3>Vikings</h3>
@@ -174,6 +201,7 @@
                 <h2>Comedy Series</h2>
                 <div class="movie-grid">
                     <div class="movie-card">
+                        <i class="fas fa-bookmark watchlist-btn" data-title="Friends" data-img="img/friends.jpeg"></i>
                         <img src="img/friends.jpeg">
                         <div class="movie-info">
                             <h3>Friends</h3>
@@ -190,6 +218,7 @@
                         </div>
                     </div>
                     <div class="movie-card">
+                        <i class="fas fa-bookmark watchlist-btn" data-title="The Office" data-img="img/theoffice.jpeg"></i>
                         <img src="img/theoffice.jpeg">
                         <div class="movie-info">
                             <h3>The Office</h3>
@@ -211,6 +240,7 @@
                 <h2>Drama Series</h2>
                 <div class="movie-grid">
                     <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Breaking Bad" data-img="img/breakingbad.jpeg"></i>
                         <img src="img/breakingbad.jpeg">
                         <div class="movie-info">
                             <h3>Breaking Bad</h3>
@@ -227,6 +257,7 @@
                         </div>
                     </div>
                     <div class="movie-card">
+                        <i class="fas fa-bookmark watchlist-btn" data-title="Game of Thrones" data-img="img/gameofthrones.jpeg"></i>
                         <img src="img/gameofthrones.jpeg">
                         <div class="movie-info">
                             <h3>Game of Thrones</h3>
@@ -248,6 +279,7 @@
                 <h2>Horror Series</h2>
                 <div class="movie-grid">
                     <div class="movie-card">
+                        <i class="fas fa-bookmark watchlist-btn" data-title="Raven" data-img="img/raven.jpeg"></i>
                         <img src="img/raven.jpeg">
                         <div class="movie-info">
                             <h3>Raven</h3>
@@ -264,6 +296,7 @@
                         </div>
                     </div>
                     <div class="movie-card">
+                        <i class="fas fa-bookmark watchlist-btn" data-title="From" data-img="img/from.jpeg"></i>
                         <img src="img/from.jpeg">
                         <div class="movie-info">
                             <h3>From</h3>

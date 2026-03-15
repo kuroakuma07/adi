@@ -416,3 +416,29 @@ function closeVideo() {
     popup.style.display = "none";
 
 }
+
+// AUTO BANNER SLIDE
+
+let slides = document.querySelectorAll(".banner-slide");
+let index = 0;
+
+function showSlide(i){
+slides.forEach(slide => slide.classList.remove("active"));
+slides[i].classList.add("active");
+}
+
+function nextSlide(){
+index++;
+if(index >= slides.length) index = 0;
+showSlide(index);
+}
+
+function prevSlide(){
+index--;
+if(index < 0) index = slides.length - 1;
+showSlide(index);
+}
+
+
+// AUTO PLAY EVERY 3 SECONDS
+setInterval(nextSlide, 3000);
