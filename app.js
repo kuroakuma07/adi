@@ -118,21 +118,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
+    /* =========================
+   MOVIE SEARCH SYSTEM
+========================= */
+
+const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup", function(){
+
+let filter = searchInput.value.toLowerCase();
+
+let movies = document.querySelectorAll(".movie-card");
+
+movies.forEach(function(movie){
+
+let title = movie.querySelector("h3").innerText.toLowerCase();
+
+if(title.includes(filter)){
+movie.style.display = "block";
+}else{
+movie.style.display = "none";
+}
+
+});
+
+});
+
+}
+
     /* =========================
        PROFILE POPUP
     ========================= */
 
     window.openProfile = function () {
 
-        const popup = document.getElementById("profilePopup");
+const popup = document.getElementById("profilePopup");
 
-        if (popup) popup.style.display = "flex";
+if (popup) popup.style.display = "flex";
 
-        const container = document.querySelector(".container");
-        if (container) container.classList.add("blur");
+const container = document.querySelector(".container");
+if (container) container.classList.add("blur");
 
-    }
+/* GET CURRENT USER */
+let user = JSON.parse(localStorage.getItem("currentUser")||
+"null");
 
+if(user){
+
+document.getElementById("name").value = user.name;
+document.getElementById("email").value = user.email;
+document.getElementById("phone").value = user.phone;
+
+}
+
+}
     window.closeProfile = function () {
 
         const popup = document.getElementById("profilePopup");
@@ -172,10 +214,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let users = JSON.parse(localStorage.getItem("users")) || [];
 
-        let userExists = users.find(user => user.email === email || user.phone === phone);
+        let userExists = users.find(user => user.email === email);
 
         if (userExists) {
-            alert("Account already exists");
+            alert("Account already exists with this email address");
             return;
         }
 
@@ -188,8 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         users.push(newUser);
 
-        localStorage.setItem("users", JSON.stringify(users));
-        localStorage.setItem("loggedIn", "true");
+       localStorage.setItem("users", JSON.stringify(users));
+localStorage.setItem("loggedIn", "true");
+localStorage.setItem("currentUser", JSON.stringify(newUser));
+
+updateProfileUI();
 
         alert("Account created successfully!");
 
@@ -216,7 +261,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        localStorage.setItem("loggedIn", "true");
+       localStorage.setItem("loggedIn", "true");
+localStorage.setItem("currentUser", JSON.stringify(user));
+
+updateProfileUI();
 
         alert("Login successful!");
 
@@ -228,14 +276,16 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =========================
        LOGOUT
     ========================= */
+window.logoutUser = function () {
 
-    window.logoutUser = function () {
+localStorage.removeItem("loggedIn");
+localStorage.removeItem("currentUser");
 
-        localStorage.removeItem("loggedIn");
-        alert("Logged out!");
+alert("Logged out!");
 
-    }
+updateProfileUI();
 
+}
     /* =========================
        WATCH BUTTON SYSTEM
     ========================= */
@@ -247,6 +297,11 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", openVideo);
 
     });
+
+    /* =========================
+    LOAD PROFILE INFO ON PAGE LOAD
+========================= */
+    updateProfileUI();
 
 });
 
@@ -284,6 +339,66 @@ function openVideo(event) {
 
     video.currentTime = 0;
     video.play();
+}
+
+/* =========================
+   WATCHLIST TOGGLE SYSTEM
+========================= */
+
+const bookmarks = document.querySelectorAll(".watchlist-btn");
+
+bookmarks.forEach((btn) => {
+
+btn.addEventListener("click", function () {
+
+// get movie info from data attributes
+let title = btn.getAttribute("data-title");
+let img = btn.getAttribute("data-img");
+
+let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+// check if movie already exists
+let index = watchlist.findIndex(m => m.title === title);
+
+if(index === -1){
+
+// ADD MOVIE
+watchlist.push({title, img});
+btn.classList.add("active");
+
+alert(title + " added to watchlist");
+
+}else{
+
+// REMOVE MOVIE
+watchlist.splice(index,1);
+btn.classList.remove("active");
+
+alert(title + " removed from watchlist");
+
+}
+
+localStorage.setItem("watchlist", JSON.stringify(watchlist));
+
+});
+
+});
+
+/* =========================
+   UPDATE PROFILE UI
+========================= */
+function updateProfileUI(){
+
+let profileText = document.querySelector(".profile-text");
+
+let user = JSON.parse(localStorage.getItem("currentUser"));
+
+if(user){
+profileText.innerText = user.name;
+}else{
+profileText.innerText = "Profile";
+}
+
 }
 
 /* =========================

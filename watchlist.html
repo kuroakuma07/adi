@@ -2,51 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Watchlist</title>
-    <link rel="stylesheet" href="watchlist.css">
+<meta charset="UTF-8">
+<title>Watchlist</title>
+<link rel="stylesheet" href="watchlist.css">
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <h1>Your Watchlist</h1>
-        <p>Movies and series you saved to watch later.</p>
+<h1>Your Watchlist</h1>
+<p>Movies and series you saved to watch later.</p>
 
-        <div class="watchlist-grid">
+<!-- MOVIES WILL LOAD HERE -->
+<div class="watchlist-grid" id="watchlistContainer"></div>
 
-            <div class="movie-card">
-                <img src="img/movie1.jpg">
-                <h3>Avengers Endgame</h3>
-                <button>Watch Now</button>
-            </div>
+<a href="index.html" class="back-btn">⬅ Back to Home</a>
 
-            <div class="movie-card">
-                <img src="img/movie2.jpg">
-                <h3>Stranger Things</h3>
-                <button>Watch Now</button>
-            </div>
+</div>
 
-            <div class="movie-card">
-                <img src="img/movie3.jpg">
-                <h3>Money Heist</h3>
-                <button>Watch Now</button>
-            </div>
 
-            <div class="movie-card">
-                <img src="img/movie4.jpg">
-                <h3>John Wick</h3>
-                <button>Watch Now</button>
-            </div>
+<script>
 
-        </div>
+/* =========================
+   LOAD WATCHLIST MOVIES
+========================= */
 
-        <a href="index.html" class="back-btn">⬅ Back to Home</a>
+let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 
-    </div>
-     <script src="app.js"></script>
+let container = document.getElementById("watchlistContainer");
 
+if(watchlist.length === 0){
+
+container.innerHTML = "<p>No movies in watchlist yet.</p>";
+
+}
+
+watchlist.forEach(movie => {
+
+let card = document.createElement("div");
+
+card.classList.add("movie-card");
+
+card.innerHTML = `
+<img src="${movie.img}">
+<h3>${movie.title}</h3>
+<button>Watch Now</button>
+`;
+
+container.appendChild(card);
+
+});
+
+</script>
+<script src="app.js"></script>
 </body>
-
 </html>

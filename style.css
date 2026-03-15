@@ -56,7 +56,7 @@ body {
     font-weight: bold;
 }
 
-.left-menu-icon{
+.left-menu-icon {
     margin: 25px 0;
     font-size: 20px;
     cursor: pointer;
@@ -107,19 +107,20 @@ body {
     cursor: pointer;
     transition: 1s ease all;
 }
-.sidebar{
-position: fixed;
-top: 50px;
-left: 0;
-height: calc(100% - 50px);
-width: 100px;
-background-color: black;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding-top: 20px;
-z-index: 999;
-border-right: 1px solid #222;
+
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    height: calc(100% - 50px);
+    width: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 999;
+    border-right: 1px solid #222;
 }
 
 .left-menu-icon {
@@ -134,21 +135,21 @@ border-right: 1px solid #222;
     background-color: #151515;
     min-height: calc(100vh - 50px);
     color: white;
-    margin-left: 60px;
+    margin-left: 100px;
     z-index: 1;
     position: relative;
     padding: 0;
 }
 
 .content-container {
-    margin-left: 60px;
-   width: calc(100% -60px);
+    margin-left: 0;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .featured-content {
-    height: 50vh;
+    height: 40vh;
     padding: 50px;
     overflow: hidden;
     border-radius: 15px;
@@ -157,6 +158,7 @@ border-right: 1px solid #222;
     margin: auto;
     width: 90%;
     position: relative;
+    margin-bottom: 40px;
 }
 
 
@@ -275,10 +277,6 @@ border-right: 1px solid #222;
     z-index: 10;
 }
 
-.container.active {
-    background-color: white;
-}
-
 .movie-list-title.active {
     color: black;
 }
@@ -359,16 +357,16 @@ border-right: 1px solid #222;
     color: black;
 }
 
-.search-box{
-position: fixed;
-top: 80px;
-left: 20%;
-width: 800px;
-display: none;
-z-index: 9999;
-opacity: 0;
-transform: scale(0.9);
-transition: all 0.3s ease-in-out;
+.search-box {
+    position: fixed;
+    top: 80px;
+    left: 20%;
+    width: 800px;
+    display: none;
+    z-index: 9999;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
 }
 
 .search-box.active {
@@ -386,17 +384,18 @@ transition: all 0.3s ease-in-out;
     box-shadow: 0 0 10px #4dbf00;
     border-radius: 30px;
 }
-.banner-slider{
+
+.banner-slider {
     width: 100%;
     overflow: hidden;
     position: relative;
     padding-left: 5px;
     border-end-end-radius: 30px;
     border-start-end-radius: 30px;
-   
+
 }
 
-.banner-slide{
+.banner-slide {
     width: 100%;
     height: 320px;
 
@@ -481,13 +480,6 @@ transition: all 0.3s ease-in-out;
     color: white;
     font-weight: bold;
     cursor: pointer;
-}
-
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
 }
 
 .movie-grid img {
@@ -603,18 +595,29 @@ transition: all 0.3s ease-in-out;
 
 /* LIGHT MODE GLOBAL */
 
-body.active {
-    background: white;
-    color: black;
+body.active{
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+url("img/zorojpg.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+color:#111;
 }
 
+.container.active{
+background: transparent;
+}
+
+
 body.active .navbar {
-    background: white;
-    color: black;
+background: rgba(255,255,255,0.85);
+backdrop-filter: blur(6px);
 }
 
 body.active .sidebar {
-    background: white;
+background: rgba(255,255,255,0.85);
+backdrop-filter: blur(6px);
 }
 
 body.active .menu-list-item a {
@@ -645,10 +648,14 @@ p {
     text-decoration: none;
 }
 
-html,body {
-   overflow-x: hidden;
+html,
+body {
+    overflow-x: hidden;
 }
 
+
+
+/* WATCHLIST BUTTON */
 .watchlist-btn {
     position: absolute;
     top: 10px;
@@ -656,96 +663,249 @@ html,body {
     font-size: 18px;
     color: white;
     cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px;
+    border-radius: 50%;
     transition: 0.3s;
+    z-index: 100;
+    cursor: pointer;
 }
 
 .watchlist-btn:hover {
-    color: #4dbf00;
+    color: #00ff88;
+    transform: scale(1.1);
 }
 
-.body{
+.watchlist-btn-saved {
+    color: #00ff88;
+}
+
+/* REMOVE BUTTON */
+.remove-btn{
+background:#ff4444;
+border:none;
+padding:8px 16px;
+color:white;
+border-radius:20px;
+cursor:pointer;
+margin-bottom:8px;
+}
+
+.remove-btn:hover{
+background:#ff2222;
+}
+
+.body {
     overflow-x: hidden;
 
 }
 
 
-.video-popup{
+.video-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.video-container {
+    position: relative;
+    width: 70%;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close-video {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* MOBILE RESPONSIVE FIX */
+@media (max-width:768px) {
+
+    /* reduce sidebar */
+    .sidebar {
+        width: 60px;
+    }
+
+    .container {
+        margin-left: 60px;
+    }
+
+    /* fix movie card size */
+    .movie-list-item {
+        width: 160px;
+        margin-right: 15px;
+    }
+
+    /* fix movie image */
+    .movie-list-item-img {
+        width: 160px;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    /* fix banner */
+    .featured-content {
+        height: 220px;
+        padding: 20px;
+    }
+
+    /* smaller banner text */
+    .banner-slide h1 {
+        font-size: 24px;
+    }
+
+    .featured-button {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+
+}
+
+.watchlist-btn.active {
+    color: #00ff88;
+}
+
+/* HOME PAGE GRID LIKE MOVIES PAGE */
+
+.movie-category{
+margin-top:80px;
+}
+
+.movie-category h2{
+margin-bottom:15px;
+font-size:22px;
+}
+
+.movie-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:20px;
+padding:20px;
+margin-top: 20px;
+}
+
+
+.movie-card{
+position: relative;
+background: #1c1c1c;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.movie-card.active{
+background: white;
+color: black;
+box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.movie-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius: 10px;
+}
+
+.movie-card:hover{
+transform:scale(1.05);
+}
+
+.movie-info{
+padding:12px;
+}
+
+.movie-info h3{
+margin-bottom:6px;
+}
+
+.movie-info p{
+color:#aaa;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.watch-btn{
+background:#4dbf00;
+border:none;
+padding:6px 14px;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.rating{
+    color: gold;
+    font-size: 14px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+/* PROFILE DETAILS POPUP */
+
+.profile-details{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.9);
+background:rgba(0,0,0,0.7);
 display:none;
 justify-content:center;
 align-items:center;
 z-index:9999;
 }
 
-.video-container{
-position:relative;
-width:70%;
-}
-
-.video-container video{
-width:100%;
-border-radius:10px;
-}
-
-.close-video{
-position:absolute;
-top:-30px;
-right:0;
+.profile-card{
+background:#111;
+padding:40px;
+border-radius:12px;
+text-align:center;
+width:300px;
 color:white;
-font-size:30px;
+}
+
+.profile-avatar{
+width:80px;
+height:80px;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+.profile-card button{
+margin-top:20px;
+padding:10px 20px;
+background:#4dbf00;
+border:none;
+border-radius:20px;
 cursor:pointer;
 }
 
 
-/* MOBILE RESPONSIVE FIX */
-@media (max-width:768px){
 
-/* reduce sidebar */
-.sidebar{
-width:60px;
-}
-
-.container{
-margin-left:60px;
-}
-
-/* fix movie card size */
-.movie-list-item{
-width:160px;
-margin-right:15px;
-}
-
-/* fix movie image */
-.movie-list-item-img{
-width:160px;
-height:220px;
-object-fit:cover;
-}
-
-/* fix banner */
-.featured-content{
-height:250px;
-padding:20px;
-}
-
-/* smaller banner text */
-.banner-slide h1{
-font-size:24px;
-}
-
-.featured-button{
-padding:8px 18px;
-font-size:12px;
-}
-
-}
 @media only screen and (max-width: 940px) {
     .menu-container {
         display: none;
     }
+}
+
+/* ACTIVE MENU IN LIGHT MODE */
+
+body.active .menu-list-item.active a{
+background:#4dbf00;
+color:black;
 }

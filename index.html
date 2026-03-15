@@ -78,25 +78,59 @@
                     <i class="fas fa-chevron-left banner-arrow left-arrow" onclick="prevSlide()"></i>
 
                     <!-- SLIDES -->
-                    <div class="banner-slide active" style="background-image:url('img/peakyblinders.jpeg');" >
+                    <div class="banner-slide active" style="background-image:url('img/peakyblinders.jpeg');">
                         <h1>Peaky Blinders</h1>
                         <p>Entertainment | Hindi</p>
                         <p>A web series about four crazy girls and their journey finding their place in a new city.</p>
-                        <button class="featured-button watch-btn" data-video="videos/peakyblindersvideo.mp4" onclick="openVideo(event)">WATCH </button>
+
+                         <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> 
+                                 <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+
+                        <button class="featured-button watch-btn" data-video="videos/peakyblindersvideo.mp4"
+                            onclick="openVideo(event)">WATCH </button>
                     </div>
 
-                    <div class="banner-slide"  style="background-image:url('img/avengers.jpeg');" >
+                    <div class="banner-slide" style="background-image:url('img/avengers.jpeg');">
                         <h1>Avengers</h1>
                         <p>Action | Marvel</p>
                         <p>The Avengers unite to fight the most dangerous threats to Earth.</p>
-                        <button class="featured-button  watch-btn " data-video="videos/avengersvideo.mp4" onclick="openVideo(event)">WATCH</button>
+
+                        <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> 
+                                 <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+
+                        <button class="featured-button  watch-btn " data-video="videos/avengersvideo.mp4"
+                            onclick="openVideo(event)">WATCH</button>
                     </div>
 
-                    <div class="banner-slide" style="background-image:url('img/strangersthings.jpeg'); background-position:center;" >
+                    <div class="banner-slide"
+                        style="background-image:url('img/strangersthings.jpeg'); background-position:center;">
                         <h1>Stranger Things</h1>
                         <p>Sci-Fi | Series</p>
                         <p>A group of kids uncover supernatural secrets in their town.</p>
-                        <button class="featured-button watch-btn" data-video="videos/strangerthingsvideo.mp4" onclick="openVideo(event)">WATCH</button>
+
+                        <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> 
+                                 <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            
+                        <button class="featured-button watch-btn" data-video="videos/strangerthingsvideo.mp4"
+                            onclick="openVideo(event)">WATCH</button>
                     </div>
 
                     <i class="fas fa-chevron-right banner-arrow right-arrow" onclick="nextSlide()"></i>
@@ -105,293 +139,650 @@
                 <p class="featured-desc">--</p>
 
             </div>
-            <div class="movie-list-container">
-                <h2 class="movie-list-title">TOP TRENDING</h2>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <i class="fas fa-bookmark watchlist-btn"></i>
-                            <img class="movie-list-item-img" src="img/fastandfurious.jpeg" alt="">
-                            <span class="movie-list-item-title">Fast & Furious</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/starwars.jpeg" alt="">
-                            <span class="movie-list-item-title">Star Wars</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/onepiece2.jpeg" alt="">
-                            <span class="movie-list-item-title">One Piece</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/bajirao.jpeg" alt="">
-                            <span class="movie-list-item-title">Bajirao</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/wednesday.jpeg" alt="">
-                            <span class="movie-list-item-title">Wednesday</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/her.jpeg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/rushhour.jpeg" alt="">
-                            <span class="movie-list-item-title">Rush Hour</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo() ">Watch</button>
+
+ <!-- ACTION -->
+            <div class="movie-category" id="action">
+                <h2>Ttrending</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                        <i class="fas fa-bookmark watchlist-btn" data-title="Avengers" data-img="img/avengers2.jpeg"></i>
+                        <img src="img/avengers2.jpeg">
+                        <div class="movie-info">
+                            <h3>Avengers</h3>
+                            <p>Marvel heroes unite to save the world.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> 
+                                 <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                              <button class="watch-btn" data-video="videos/avengersvideo.mp4">Watch</button>
                         </div>
                     </div>
-                    <i class="fas fa-chevron-right arrow"></i>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Fast and Furious" data-img="img/fastandfurious.jpeg"></i>
+                        <img src="img/fastandfurious.jpeg">
+                        <div class="movie-info">
+                            <h3>Fast and Furious</h3>
+                            <p>High-speed racing and family bonds.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> 
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn" data-video="videos/fastandfuriousvideo.mp4">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Jurassic Park" data-img="img/jurassic.jpeg"></i>
+                        <img src="img/jurassic.jpeg">
+                        <div class="movie-info">
+                            <h3>Jurassic Park</h3>
+                            <p>Prehistoric adventure in a theme park.</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn"data-video="videos/jurassic.mp4">Watch</button>
+                    </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="onepiece" data-img="img/onepiece2.jpeg"></i>
+                        <img src="img/onepiece2.jpeg">
+                        <div class="movie-info">
+                            <h3>One Piece</h3>
+                            <p>Adventurous tale of a pirate crew.</p>
+                                <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                                </div>                    
+                            <button class="watch-btn" data-video="videos/onepiece.mp4" >Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Titanic" data-img="img/titanic.jpeg"></i>
+                        <img src="img/titanic.jpeg">
+                        <div class="movie-info">
+                            <h3>Titanic</h3>
+                            <p>Origin story of Gotham's villain.</p>
+                                <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                                        </div>
+                            <button class="watch-btn" data-video="videos/titanic.mp4">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Game of Thrones" data-img="img/gameofthrones.jpeg"></i>
+                        <img src="img/gameofthrones.jpeg">
+                        <div class="movie-info">
+                            <h3>Game of Thrones</h3>
+                            <p> Epic fantasy series about warring families.</p>
+                                <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                                        </div>
+                            <button class="watch-btn" data-video="videos/gameofthrones.mp4">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="bajiraomastani" data-img="img/bajirao.jpeg"></i>
+                        <img src="img/bajirao.jpeg">
+                        <div class="movie-info">
+                            <h3>Bajirao Mastani</h3>
+                            <p>Historical romance film.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Raven" data-img="img/raven.jpeg"></i>
+                        <img src="img/raven.jpeg">
+                        <div class="movie-info">
+                            <h3>Raven</h3>
+                            <p>Origin story of Gotham's villain.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i> 
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                                        </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="movie-list-container">
-                <h2 class="movie-list-title">HOLLYWOOD</h2>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/avengers2.jpeg" alt="">
-                            <span class="movie-list-item-title">Avengers: Endgame</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/joker.jpeg" alt="">
-                            <span class="movie-list-item-title">Joker</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/deadpool.jpeg" alt="">
-                            <span class="movie-list-item-title">Deadpool</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/jurassic.jpeg" alt="">
-                            <span class="movie-list-item-title">Jurassic Park</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/avatar.jpeg" alt="">
-                            <span class="movie-list-item-title">Avatar</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/rushhour.jpeg" alt="">
-                            <span class="movie-list-item-title">Rush Hour</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1917.jpeg" alt="">
-                            <span class="movie-list-item-title">1917</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
+            </div><!-- HOLLYWOOD -->
+            <div class="movie-category" id="hollywood">
+                <h2>Hollywood</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="The Mask" data-img="img/themask.jpeg"></i>
+                        <img src="img/themask.jpeg">
+                        <div class="movie-info">
+                            <h3>The Mask</h3>
+                            <p>Comedy movie with crazy fun moments.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+
+                            <button class="watch-btn">Watch</button>
                         </div>
                     </div>
-                    <i class="fas fa-chevron-right arrow"></i>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Deadpool" data-img="img/deadpool.jpeg"></i>
+                        <img src="img/deadpool.jpeg">
+                        <div class="movie-info">
+                            <h3>Deadpool</h3>
+                            <p>Funny superhero with crazy humor.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Breaking Bad" data-img="img/breakingbad.jpeg"></i>
+                        <img src="img/breakingbad.jpeg">
+                        <div class="movie-info">
+                            <h3>Breaking Bad</h3>
+                            <p>Chemistry teacher turned meth kingpin.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Friends" data-img="img/friends.jpeg"></i>
+                        <img src="img/friends.jpeg">
+                        <div class="movie-info">
+                            <h3>Friends</h3>
+                            <p>Comedy series about six friends in New York.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Avatar" data-img="img/avatar.jpeg"></i>
+                        <img src="img/avatar.jpeg">
+                        <div class="movie-info">
+                            <h3>Avatar</h3>
+                            <p>Science fiction adventure on Pandora.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Rush Hour" data-img="img/rushhour.jpeg"></i>
+                        <img src="img/rushhour.jpeg">
+                        <div class="movie-info">
+                            <h3>Rush Hour</h3>
+                            <p>Police comedy action movie.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="featured-content"
-                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-2.jpg');">
-                <img class="featured-title" src="img/traintobusan.jpeg" alt="">
-                <p class="featured-desc">Movie is based on a zombies outbreak. Advantures Action</p>
-                <button class="featured-button watch-btn" onclick="openVideo()">WATCH</button>
-            </div>
-            <div class="movie-list-container">
-                <h2 class="movie-list-title">BOLLYWOOD</h2>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/bajirao.jpeg" alt="">
-                            <span class="movie-list-item-title">Bajirao Mastani</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/tarezameenpar.jpeg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/chhavva.jpeg" alt="">
-                            <span class="movie-list-item-title">Chhavva</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/ramaiyavastavaiya.jpeg" alt="">
-                            <span class="movie-list-item-title">Ramaiya Vastavaiya</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/5.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
+            </div><!-- ANIME -->
+            <div class="movie-category" id="anime">
+                <h2>Anime</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="One Piece" data-img="img/onepiece2.jpeg"></i>
+                        <img src="img/onepiece2.jpeg">
+                        <div class="movie-info">
+                            <h3>One Piece</h3>
+                            <p>Adventurous tale of a pirate crew.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
                         </div>
                     </div>
-                    <i class="fas fa-chevron-right arrow"></i>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Naruto" data-img="img/naruto.jpeg"></i>
+                        <img src="img/naruto.jpeg">
+                        <div class="movie-info">
+                            <h3>Naruto</h3>
+                            <p>Action-packed ninja adventure.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Saven Deadly Sins" data-img="img/savendeadlysins.jpeg"></i>
+                        <img src="img/savendeadlysins.jpeg">
+                        <div class="movie-info">
+                            <h3>Saven Deadly Sins</h3>
+                            <p>World war survival mission story.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Solo Leveling" data-img="img/solo.jpeg"></i>
+                        <img src="img/solo.jpeg">
+                        <div class="movie-info">
+                            <h3>Solo Leveling</h3>
+                            <p>Webtoon adaptation of a popular manhwa.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Spy X Family" data-img="img/spyxfamily.jpeg"></i>
+                        <img src="img/spyxfamily.jpeg">
+                        <div class="movie-info">
+                            <h3>Spy X Family</h3>
+                            <p>Action thriller with intense fights.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Demon Slayer" data-img="img/demonslayer.jpeg"></i>
+                        <img src="img/demonslayer.jpeg">
+                        <div class="movie-info">
+                            <h3>Demon Slayer</h3>
+                            <p>Story of a boy fighting demons.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Joker" data-img="img/joker.jpeg"></i>
+                        <img src="img/joker.jpeg">
+                        <div class="movie-info">
+                            <h3>Joker</h3>
+                            <p>Origin story of Gotham's villain.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Storm" data-img="img/strom.jpeg"></i>
+                        <img src="img/strom.jpeg">
+                        <div class="movie-info">
+                            <h3>Storm</h3>
+                            <p>Action thriller with intense fights.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="movie-list-container">
-                <h2 class="movie-list-title">ANIME</h2>
-                <div class="movie-list-wrapper">
-                    <div class="movie-list">
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/onepiece.jpeg" alt="">
-                            <span class="movie-list-item-title">One Piece</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/solo.jpeg" alt="">
-                            <span class="movie-list-item-title">Solo Livling</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/savendeadlysins.jpeg" alt="">
-                            <span class="movie-list-item-title">Savendeadlysins</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/naruto.jpeg" alt="">
-                            <span class="movie-list-item-title">Naruto</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/spyxfamily.jpeg" alt="">
-                            <span class="movie-list-item-title">Spy x Family</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
-                        </div>
-                        <div class="movie-list-item">
-                            <img class="movie-list-item-img" src="img/1.jpg" alt="">
-                            <span class="movie-list-item-title">Her</span>
-                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                                hic fugit similique accusantium.</p>
-                            <button class="movie-list-item-button watch-btn" onclick="openVideo()">Watch</button>
+            </div><!-- BOLLYWOOD -->
+            <div class="movie-category" id="bollywood">
+                <h2>Bollywood</h2>
+                <div class="movie-grid">
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Bajirao" data-img="img/bajirao.jpeg"></i>
+                        <img src="img/bajirao.jpeg">
+                        <div class="movie-info">
+                            <h3>Bajirao Mastani</h3>
+                            <p>Historical drama about a brave warrior.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
                         </div>
                     </div>
-                    <i class="fas fa-chevron-right arrow"></i>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Ramaiya Vastavay" data-img="img/ramaiyavastavaiya.jpeg"></i>
+                        <img src="img/ramaiyavastavaiya.jpeg">
+                        <div class="movie-info">
+                            <h3>Ramaiya Vastavay</h3>
+                            <p>Emotional drama about a woman's journey.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Chhavva" data-img="img/chhavva.jpeg"></i>
+                        <img src="img/chhavva.jpeg">
+                        <div class="movie-info">
+                            <h3>Chhavva</h3>
+                            <p>Emotional drama about a woman's journey.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Tare Zameen Par" data-img="img/tarezameenpar.jpeg"></i>
+                        <img src="img/tarezameenpar.jpeg">
+                        <div class="movie-info">
+                            <h3>Tare Zameen Par</h3>
+                            <p>Emotional drama about a woman's journey.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title=" omg" data-img="img/omg.webp"></i>
+                        <img src="img/omg.webp">
+                        <div class="movie-info">
+                            <h3>OMG</h3>
+                            <p>Comedy-drama about a girl's journey.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Housefull" data-img="img/housefull5.jpg"></i>
+                        <img src="img/housefull5.jpg">
+                        <div class="movie-info">
+                            <h3>Housefull</h3>
+                            <p>Comedy about a group of friends.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Joker" data-img="img/joker.jpeg"></i>
+                        <img src="img/joker.jpeg">
+                        <div class="movie-info">
+                            <h3>Joker</h3>
+                            <p>Origin story of Gotham's villain.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
+                    <div class="movie-card">
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Annabelle" data-img="img/annabelle.jpeg"></i>
+                        <img src="img/annabelle.jpeg">
+                        <div class="movie-info">
+                            <h3>Annabelle</h3>
+                            <p>Haunted doll horror movie.</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
+                            </div>
+                            <button class="watch-btn">Watch</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+                    
+                     
 
-    <!-- PROFILE POPUP -->
 
-    <div id="profilePopup" class="profile-popup">
+        <!-- PROFILE POPUP -->
 
-        <span class="close-btn" onclick="closeProfile()">×</span>
+        <div id="profilePopup" class="profile-popup">
 
-        <div class="profile-box">
+            <span class="close-btn" onclick="closeProfile()">×</span>
 
-            <h2>Create Account</h2>
+            <div class="profile-box">
 
-            <input type="text" id="name" placeholder="Name">
+                <h2>Create Account</h2>
 
-            <input type="date" id="dob" placeholder="Date of Birth">
+                <input type="text" id="name" placeholder="Name">
 
-            <select id="gender">
-                <option>Gender</option>
-                <option>Male</option>
-                <option>Female</option>
-            </select>
+                <input type="date" id="dob" placeholder="Date of Birth">
 
-            <input type="email" id="email" placeholder="Email">
+                <select id="gender">
+                    <option>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
 
-            <input type="text" id="phone" placeholder="Phone" maxlength="10">
+                <input type="email" id="email" placeholder="Email">
 
-            <input type="password" id="password" placeholder="Password">
+                <input type="text" id="phone" placeholder="Phone" maxlength="10">
 
-            <button  onclick="signupUser()">Create Account</button>
+                <input type="password" id="password" placeholder="Password">
 
-            <button  onclick="loginUser()">Login</button>
+                <button onclick="signupUser()">Create Account</button>
 
-            <button  onclick="logoutUser()">Logout</button>
+                <button onclick="loginUser()">Login</button>
+
+                <button onclick="logoutUser()">Logout</button>
+
+            </div>
 
         </div>
+        
+        <!-- PROFILE POPUP -->
+<div id="profilePopup" class="profile-popup">
 
-    </div>
+<div class="profile-box">
 
-    <div id="videoPopup" class="video-popup">
+<h2>User Profile</h2>
 
-    <div class="video-container">
-        <span class="close-video" onclick="closeVideo()">✖</span>
+<label>Name</label>
+<input type="text" id="name" placeholder="Enter name">
 
-        <video id="movieVideo"  width="800" controls>
-            <source src="videos/avengersvideo.mp4" type="video/mp4">
-        </video>
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter email">
+
+<label>Phone</label>
+<input type="text" id="phone" placeholder="Enter phone">
+
+<label>Password</label>
+<input type="password" id="password" placeholder="Enter password">
+
+<div class="profile-buttons">
+
+<button onclick="signupUser()">Signup</button>
+
+<button onclick="loginUser()">Login</button>
+
+<button onclick="logoutUser()">Logout</button>
+
+<button onclick="closeProfile()">Close</button>
+
+</div>
+
+</div>
+
+</div>
+
+        <!-- PROFILE PANEL -->
+
+<div id="profileDetails" class="profile-details">
+
+    <div class="profile-card">
+
+        <img src="img/smile.jpeg" class="profile-avatar">
+
+        <h2 id="profileName">User Name</h2>
+
+        <p id="profileEmail">Email</p>
+
+        <p id="profilePhone">Phone</p>
+
+        <button onclick="logoutUser()">Logout</button>
 
     </div>
 
 </div>
-    <script src="app.js"></script>
+
+        <div id="videoPopup" class="video-popup">
+
+            <div class="video-container">
+                <span class="close-video" onclick="closeVideo()">✖</span>
+
+                <video id="movieVideo" width="800" controls>
+                    <source src="videos/avengersvideo.mp4" type="video/mp4">
+                </video>
+
+            </div>
+
+        </div>
+        <script src="app.js"></script>
 </body>
 
 </html>
