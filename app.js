@@ -290,13 +290,59 @@ updateProfileUI();
        WATCH BUTTON SYSTEM
     ========================= */
 
-    const watchButtons = document.querySelectorAll(".watch-btn");
+    const bookmarks = document.querySelectorAll(".watchlist-btn");
 
-    watchButtons.forEach(button => {
+bookmarks.forEach((btn) => {
 
-        button.addEventListener("click", openVideo);
+btn.addEventListener("click", function () {
 
-    });
+let title = btn.getAttribute("data-title");
+let img = btn.getAttribute("data-img");
+
+let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+let index = watchlist.findIndex(m => m.title === title);
+
+if(index === -1){
+
+watchlist.push({title, img});
+btn.classList.add("active");
+
+alert(title + " added to watchlist");
+
+}else{
+
+watchlist.splice(index,1);
+btn.classList.remove("active");
+
+alert(title + " removed from watchlist");
+
+}
+
+localStorage.setItem("watchlist", JSON.stringify(watchlist));
+
+});
+
+});
+
+
+/* =========================
+   RESTORE WATCHLIST ICONS
+========================= */
+
+let savedWatchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+savedWatchlist.forEach(movie => {
+
+document.querySelectorAll(".watchlist-btn").forEach(btn => {
+
+if(btn.getAttribute("data-title") === movie.title){
+btn.classList.add("active");
+}
+
+});
+
+});
 
     /* =========================
     LOAD PROFILE INFO ON PAGE LOAD
@@ -341,48 +387,7 @@ function openVideo(event) {
     video.play();
 }
 
-/* =========================
-   WATCHLIST TOGGLE SYSTEM
-========================= */
 
-const bookmarks = document.querySelectorAll(".watchlist-btn");
-
-bookmarks.forEach((btn) => {
-
-btn.addEventListener("click", function () {
-
-// get movie info from data attributes
-let title = btn.getAttribute("data-title");
-let img = btn.getAttribute("data-img");
-
-let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-
-// check if movie already exists
-let index = watchlist.findIndex(m => m.title === title);
-
-if(index === -1){
-
-// ADD MOVIE
-watchlist.push({title, img});
-btn.classList.add("active");
-
-alert(title + " added to watchlist");
-
-}else{
-
-// REMOVE MOVIE
-watchlist.splice(index,1);
-btn.classList.remove("active");
-
-alert(title + " removed from watchlist");
-
-}
-
-localStorage.setItem("watchlist", JSON.stringify(watchlist));
-
-});
-
-});
 
 /* =========================
    UPDATE PROFILE UI
@@ -442,3 +447,4 @@ showSlide(index);
 
 // AUTO PLAY EVERY 3 SECONDS
 setInterval(nextSlide, 5000);
+

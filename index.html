@@ -83,7 +83,7 @@
                     <i class="fas fa-chevron-left banner-arrow left-arrow" onclick="prevSlide()"></i>
 
                     <!-- SLIDES -->
-                    <div class="banner-slide active" style="background-image:url('img/peakyblinders.jpeg');">
+                    <div class="banner-slide active" style="background-image:url('img/peakyblinders.jpeg')"; data-video="videos/peakyblindersvideo.mp4">
                         <h1>Peaky Blinders</h1>
                         <p>Entertainment | Hindi</p>
                         <p>A web series about four crazy girls and their journey finding their place in a new city.</p>
@@ -101,7 +101,7 @@
                             onclick="openVideo(event)">WATCH </button>
                     </div>
 
-                    <div class="banner-slide" style="background-image:url('img/moneyhiestposter.jpeg');">
+                    <div class="banner-slide" style="background-image:url('img/moneyhiestposter.jpeg');" data-video="videos/moneyheist.mp4">
                         <h1>Money Heist</h1>
                         <p>Action | Marvel</p>
                         <p>The Avengers unite to fight the most dangerous threats to Earth.</p>
@@ -120,7 +120,7 @@
                     </div>
 
                     <div class="banner-slide"
-                        style="background-image:url('img/strangersthings.jpeg'); background-position:center;">
+                        style="background-image:url('img/strangersthings.jpeg'); background-position:center;"  data-video="videos/strangerthingsvideo.mp4">
                         <h1>Stranger Things</h1>
                         <p>Sci-Fi | Series</p>
                         <p>A group of kids uncover supernatural secrets in their town.</p>
@@ -149,7 +149,7 @@
                 <h2>Ttrending</h2>
                 <div class="movie-grid">
                     <div class="movie-card">
-                        <i class="fas fa-bookmark watchlist-btn" data-title="Avengers" data-img="img/berlin.jpeg"></i>
+                        <i class="fas fa-bookmark watchlist-btn" data-title="Avengers" data-img="img/berlin.jpeg" data-video="videos/avengers.mp4"></i>
                         <img src="img/berlin.jpeg">
                         <div class="movie-info">
                             <h3>Money Heist</h3>
@@ -162,12 +162,12 @@
                                 <i class="far fa-star"></i> 
                                  <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                             </div>
-                              <button class="watch-btn" data-video="videos/moneyheist.mp4">Watch</button>
+                              <button class="watch-btn" data-video="videos/moneyheist.mp4" onclick="openVideo(event)">Watch</button>
                         </div>
                     </div>
 
                     <div class="movie-card">
-                            <i class="fas fa-bookmark watchlist-btn" data-title="Fast and Furious" data-img="img/fastandfurious.jpeg"></i>
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Fast and Furious" data-img="img/fastandfurious.jpeg" data-video="videos/fastandfurious.mp4"></i>
                         <img src="img/fastandfurious.jpeg">
                         <div class="movie-info">
                             <h3>Fast and Furious</h3>
@@ -180,11 +180,11 @@
                                 <i class="far fa-star"></i> 
                                 <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                             </div>
-                            <button class="watch-btn" data-video="videos/fastandfurious.mp4">Watch</button>
+                            <button class="watch-btn" data-video="videos/fastandfurious.mp4" onclick="openVideo(event)">Watch</button>
                         </div>
                     </div>
                     <div class="movie-card">
-                            <i class="fas fa-bookmark watchlist-btn" data-title="Jurassic Park" data-img="img/jurassic.jpeg"></i>
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Jurassic Park" data-img="img/jurassic.jpeg" data-video="videos/jurassic.mp4"></i>
                         <img src="img/jurassic.jpeg">
                         <div class="movie-info">
                             <h3>Jurassic Park</h3>
@@ -197,11 +197,11 @@
                                     <i class="far fa-star"></i>
                                     <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                             </div>
-                            <button class="watch-btn"data-video="videos/jurassic.mp4">Watch</button>
+                            <button class="watch-btn" data-video="videos/jurassic.mp4" onclick="openVideo(event)">Watch</button>
                     </div>
                     </div>
                     <div class="movie-card">
-                            <i class="fas fa-bookmark watchlist-btn" data-title="onepiece" data-img="img/onepiece2.jpeg"></i>
+                            <i class="fas fa-bookmark watchlist-btn" data-title="onepiece" data-img="img/onepiece2.jpeg" data-video="videos/onepiece.mp4"></i>
                         <img src="img/onepiece2.jpeg">
                         <div class="movie-info">
                             <h3>One Piece</h3>
@@ -214,11 +214,11 @@
                                         <i class="far fa-star"></i>
                                         <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                                 </div>                    
-                            <button class="watch-btn" data-video="videos/onepiece.mp4" >Watch</button>
+                            <button class="watch-btn" data-video="videos/onepiece.mp4" onclick="openVideo(event)">Watch</button>
                         </div>
                     </div>
                     <div class="movie-card">
-                            <i class="fas fa-bookmark watchlist-btn" data-title="Titanic" data-img="img/titanic.jpeg"></i>
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Titanic" data-img="img/titanic.jpeg" data-video="videos/titanic.mp4"></i>
                         <img src="img/titanic.jpeg">
                         <div class="movie-info">
                             <h3>Titanic</h3>
@@ -231,11 +231,11 @@
                                         <i class="far fa-star"></i>
                                         <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                                         </div>
-                            <button class="watch-btn" data-video="videos/tiatanic.mp4">Watch</button>
+                            <button class="watch-btn" data-video="videos/titanic.mp4" onclick="openVideo(event)">Watch</button>
                         </div>
                     </div>
                     <div class="movie-card">
-                            <i class="fas fa-bookmark watchlist-btn" data-title="Game of Thrones" data-img="img/gameofthrones.jpeg"></i>
+                            <i class="fas fa-bookmark watchlist-btn" data-title="Game of Thrones" data-img="img/gameofthrones.jpeg" data-video="videos/gameofthrones.mp4"></i>
                         <img src="img/gameofthrones.jpeg">
                         <div class="movie-info">
                             <h3>Game of Thrones</h3>
@@ -248,11 +248,11 @@
                                         <i class="far fa-star"></i>
                                         <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                                         </div>
-                            <button class="watch-btn" data-video="videos/gameofthrones.mp4">Watch</button>
+                            <button class="watch-btn" data-video="videos/gameofthrones.mp4" onclick="openVideo(event)">Watch</button>
                         </div>
                     </div>
                     <div class="movie-card">
-                            <i class="fas fa-bookmark watchlist-btn" data-title="bajiraomastani" data-img="img/bajirao.jpeg"></i>
+                            <i class="fas fa-bookmark watchlist-btn" data-title="bajiraomastani" data-img="img/bajirao.jpeg" data-video="videos/bajiraomastani.mp4"></i>
                         <img src="img/bajirao.jpeg">
                         <div class="movie-info">
                             <h3>Bajirao Mastani</h3>
@@ -265,7 +265,7 @@
                                 <i class="far fa-star"></i>
                                 <h5 style="color: #fff; font-size: 12px; margin-left: 5px;">8.5/10</h5>
                             </div>
-                             <button class="watch-btn" data-video="videos/bajiraomastani.mp4">Watch</button>
+                             <button class="watch-btn" data-video="videos/bajiraomastani.mp4" onclick="openVideo(event)">Watch</button>
                         </div>
                     </div>
                     <div class="movie-card">
@@ -787,7 +787,8 @@
             </div>
 
         </div>
-        <script src="app.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>

@@ -57,11 +57,11 @@ right:20px;
 
 .featured-button {
 
-    margin-top: 20px;
-    padding: 10px 30px;
+    margin-top: 10px;
+    padding: 7px 30px;
     background: #9cff2e;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
 
 }
